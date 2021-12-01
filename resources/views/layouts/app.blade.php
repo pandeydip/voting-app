@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v=erertrw">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v=er33rtrw">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
