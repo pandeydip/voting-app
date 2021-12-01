@@ -28,7 +28,8 @@
         </div>
     </div>
     <div class="ideas-container space-y-6 my-6">
-        <div class="idea-container bg-white rounded-xl flex hover:shadow-card cursor-pointer transition duration-500 ease-in">
+        <div
+            class="idea-container bg-white rounded-xl flex hover:shadow-card cursor-pointer transition duration-500 ease-in">
             <div class="border-r border-gray-100 px-5 py-8">
                 <div class="text-center">
                     <div class="font-semibold text-2xl">12</div>
@@ -64,25 +65,39 @@
                             <div>&bull;</div>
                             <div class="text-gray-900">3 Comments</div>
                         </div>
-                        <div class="flex item-center space-x-2">
+                        <div class="flex item-center space-x-2" x-data="{ isOpen:false }">
                             <div
                                 class="bg-gray-200 text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                                 Open
                             </div>
-                            <button class="relative  border bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-500 ease-in py-2 px-4">
-                                <svg fill="currentColor" width="24" height="6"><path d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z" style="color: rgba(163, 163, 163, .5)"></svg>
-                                <ul class="absolute text-left w-44 font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8">
-                                    <li><a href="" class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Mark as spam</a></li>
-                                    <li><a href="" class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Delete Post</a></li>
+                            <button @click="isOpen = !isOpen"
+                                    class="relative  border bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-500 ease-in py-2 px-4">
+                                <svg fill="currentColor" width="24" height="6">
+                                    <path
+                                        d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z"
+                                        style="color: rgba(163, 163, 163, .5)">
+                                </svg>
+                                <ul
+                                    x-cloak
+                                    x-show.transition.origin.top.left="isOpen"
+                                    @click.away="isOpen=false"
+                                    @keydown.escape.window="isOpen = false"
+                                    class="absolute text-left w-44 font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8">
+                                    <li><a href=""
+                                           class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Mark
+                                            as spam</a></li>
+                                    <li><a href=""
+                                           class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Delete
+                                            Post</a></li>
                                 </ul>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-        <div class="idea-container bg-white rounded-xl flex hover:shadow-card cursor-pointer transition duration-500 ease-in">
+        <div
+            class="idea-container bg-white rounded-xl flex hover:shadow-card cursor-pointer transition duration-500 ease-in">
             <div class="border-r border-gray-100 px-5 py-8">
                 <div class="text-center">
                     <div class="font-semibold text-blue text-2xl">18</div>
@@ -128,11 +143,20 @@
                                 class="bg-yellow text-xxs text-white font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                                 In Progress
                             </div>
-                            <button class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-500 ease-in py-2 px-4">
-                                <svg fill="currentColor" width="24" height="6"><path d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z" style="color: rgba(163, 163, 163, .5)"></svg>
+                            <button
+                                class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-500 ease-in py-2 px-4">
+                                <svg fill="currentColor" width="24" height="6">
+                                    <path
+                                        d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z"
+                                        style="color: rgba(163, 163, 163, .5)">
+                                </svg>
                                 <ul class="absolute text-left w-44 font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8">
-                                    <li><a href="" class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Mark as spam</a></li>
-                                    <li><a href="" class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Delete Post</a></li>
+                                    <li><a href=""
+                                           class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Mark
+                                            as spam</a></li>
+                                    <li><a href=""
+                                           class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Delete
+                                            Post</a></li>
                                 </ul>
                             </button>
                         </div>
@@ -141,7 +165,8 @@
             </div>
 
         </div>
-        <div class="idea-container bg-white rounded-xl flex hover:shadow-card cursor-pointer transition duration-500 ease-in">
+        <div
+            class="idea-container bg-white rounded-xl flex hover:shadow-card cursor-pointer transition duration-500 ease-in">
             <div class="border-r border-gray-100 px-5 py-8">
                 <div class="text-center">
                     <div class="font-semibold text-2xl">2</div>
@@ -187,11 +212,20 @@
                                 class="bg-red text-xxs text-white font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                                 Closed
                             </div>
-                            <button class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-500 ease-in py-2 px-4">
-                                <svg fill="currentColor" width="24" height="6"><path d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z" style="color: rgba(163, 163, 163, .5)"></svg>
+                            <button
+                                class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-500 ease-in py-2 px-4">
+                                <svg fill="currentColor" width="24" height="6">
+                                    <path
+                                        d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z"
+                                        style="color: rgba(163, 163, 163, .5)">
+                                </svg>
                                 <ul class="absolute text-left w-44 font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8">
-                                    <li><a href="" class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Mark as spam</a></li>
-                                    <li><a href="" class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Delete Post</a></li>
+                                    <li><a href=""
+                                           class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Mark
+                                            as spam</a></li>
+                                    <li><a href=""
+                                           class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Delete
+                                            Post</a></li>
                                 </ul>
                             </button>
                         </div>
@@ -200,7 +234,8 @@
             </div>
 
         </div>
-        <div class="idea-container bg-white rounded-xl flex hover:shadow-card cursor-pointer transition duration-500 ease-in">
+        <div
+            class="idea-container bg-white rounded-xl flex hover:shadow-card cursor-pointer transition duration-500 ease-in">
             <div class="border-r border-gray-100 px-5 py-8">
                 <div class="text-center">
                     <div class="font-semibold text-2xl">22</div>
@@ -246,11 +281,20 @@
                                 class="bg-green text-xxs text-white font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                                 Implemented
                             </div>
-                            <button class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-500 ease-in py-2 px-4">
-                                <svg fill="currentColor" width="24" height="6"><path d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z" style="color: rgba(163, 163, 163, .5)"></svg>
+                            <button
+                                class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-500 ease-in py-2 px-4">
+                                <svg fill="currentColor" width="24" height="6">
+                                    <path
+                                        d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z"
+                                        style="color: rgba(163, 163, 163, .5)">
+                                </svg>
                                 <ul class="absolute text-left w-44 font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8">
-                                    <li><a href="" class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Mark as spam</a></li>
-                                    <li><a href="" class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Delete Post</a></li>
+                                    <li><a href=""
+                                           class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Mark
+                                            as spam</a></li>
+                                    <li><a href=""
+                                           class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Delete
+                                            Post</a></li>
                                 </ul>
                             </button>
                         </div>
@@ -259,7 +303,8 @@
             </div>
 
         </div>
-        <div class="idea-container bg-white rounded-xl flex hover:shadow-card cursor-pointer transition duration-500 ease-in">
+        <div
+            class="idea-container bg-white rounded-xl flex hover:shadow-card cursor-pointer transition duration-500 ease-in">
             <div class="border-r border-gray-100 px-5 py-8">
                 <div class="text-center">
                     <div class="font-semibold text-2xl">55</div>
@@ -305,11 +350,20 @@
                                 class="bg-purple text-xxs text-white font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                                 Considering
                             </div>
-                            <button class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-500 ease-in py-2 px-4">
-                                <svg fill="currentColor" width="24" height="6"><path d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z" style="color: rgba(163, 163, 163, .5)"></svg>
+                            <button
+                                class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-500 ease-in py-2 px-4">
+                                <svg fill="currentColor" width="24" height="6">
+                                    <path
+                                        d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z"
+                                        style="color: rgba(163, 163, 163, .5)">
+                                </svg>
                                 <ul class="absolute text-left w-44 font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8">
-                                    <li><a href="" class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Mark as spam</a></li>
-                                    <li><a href="" class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Delete Post</a></li>
+                                    <li><a href=""
+                                           class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Mark
+                                            as spam</a></li>
+                                    <li><a href=""
+                                           class="hover:bg-gray-100 transition block duration-500 ease-in px-5 py-3">Delete
+                                            Post</a></li>
                                 </ul>
                             </button>
                         </div>

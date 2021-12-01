@@ -25742,6 +25742,10 @@ video {
   -webkit-line-clamp: unset;
 }
 
+[x-clock]{
+  display: none !important;
+}
+
 /* vertical line to the left of the comments */
 
 .comments-container::before {
