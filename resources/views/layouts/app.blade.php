@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 <body class="font-sans bg-gray-background text-green-900 text-sm">
 <header class="flex items-center justify-between px-8 py4">
@@ -97,7 +97,7 @@
                     </button>
                     <button type="submit"
                             class="flex items-center text-white bg-blue justify-center w-1/2 h-11 text-sm font-semibold rounded-xl border border-gray-200 hover:bg-blue-hover transition duration-200 ease-in px-6 py-3">
-                        <span class="ml-1">Attach</span>
+                        <span class="ml-1">Submit</span>
                     </button>
                 </div>
 
